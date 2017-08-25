@@ -1,0 +1,23 @@
+ipcp-accept-local
+ipcp-accept-remote
+ms-dns  8.8.8.8
+ms-dns 209.244.0.3
+ms-dns 208.67.222.222
+name xl2tpd
+#noccp
+auth
+crtscts
+idle 1800
+mtu 1410         #第一次配置不建议设置mtu，mru，否则可能789错误
+mru 1410
+nodefaultroute
+debug
+lock
+proxyarp
+connect-delay 5000
+refuse-pap
+refuse-chap
+refuse-mschap
+require-mschap-v2
+persist
+logfile /var/log/xl2tpd.log
